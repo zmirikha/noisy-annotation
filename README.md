@@ -8,7 +8,7 @@ Deep convolutional neural networks have driven substantial advancements in the a
 Semantic segmentation, noisy annotations, meta-learning, robust deep learning
 
 ## Cite
-Zahra Mirikharaji, Yiqi Yan, Ghassan Hamarneh, "[Learning to segment skin lesions from noisy annotations](https://www2.cs.sfu.ca/~hamarneh/ecopy/miccai_mil3id2019.pdf)", Domain adaptation and representation transfer and medical image learning with less labels and imperfect data, 2019
+Zahra Mirikharaji, Yiqi Yan, Ghassan Hamarneh, "[Learning to segment skin lesions from noisy annotations](https://www2.cs.sfu.ca/~hamarneh/ecopy/miccai_mil3id2019.pdf)", Domain adaptation and representation transfer and medical image learning with less labels and imperfect data (MICCAI MIL3ID), volume 11795, pages 207-215, 2019.
 
 
 The corresponding bibtex entry is:
@@ -23,3 +23,39 @@ The corresponding bibtex entry is:
   publisher={Springer}
 }
 ```
+
+## Usage
+To get a quick help about the commands use:
+
+python main.py --help
+
+To modify the configuration, update settings.py file
+
+To start training the model, first organize your training data as follows:
+```
+./data/
+        Training/
+                 noisy_gt/
+                   (many gt files)
+                 noisy_img/
+                   (many image files)
+                 clean_gt/
+                   (many gt files)
+                 clean_img/
+                   (many image files)
+```
+Then run:
+python main.py train
+
+
+To evaluate, organzie your test data as follows:
+```
+./data/
+        test_gt/
+            (many gt files)
+        test_img/
+            (many image files)
+```
+Then run the following command:
+python main.py inference
+The predicted probability maps will be place in the results directory.
