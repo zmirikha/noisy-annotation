@@ -26,9 +26,9 @@ The corresponding bibtex entry is:
 
 ## Usage
 To get a quick help about the commands use:
-
+```
 python main.py --help
-
+```
 To modify the configuration, update settings.py file
 
 To start training the model, first organize your training data as follows:
@@ -45,8 +45,9 @@ To start training the model, first organize your training data as follows:
                    (many image files)
 ```
 Then run:
+```
 python main.py train
-
+```
 
 To evaluate, organzie your test data as follows:
 ```
@@ -57,5 +58,7 @@ To evaluate, organzie your test data as follows:
             (many image files)
 ```
 Then run the following command:
+```
 python main.py inference
+```
 The predicted probability maps will be place in the results directory.
